@@ -23,7 +23,8 @@ var jsonWrite = function (res, ret) {
 module.exports = {
     add: function (req, res, next) {
         pool.getConnection(function(err, connection) {
-            // 获取前台页面传过来的参数
+        console.log("---");    
+	// 获取前台页面传过来的参数
             var param = req.query || req.params;
 
             // 建立连接，向表中插入值
